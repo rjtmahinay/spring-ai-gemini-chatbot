@@ -6,7 +6,7 @@ Java in AI: Implementation of Google Vertex AI using Spring AI and Hilla
 
 ## Dynamic Diagram
 
-![Gemini Chatbot System Landscape Diagram](misc/gemini-chatbot.png)
+![Gemini Chatbot Dynamic Diagram](misc/gemini-chatbot.png)
 
 ### Sequence
 
