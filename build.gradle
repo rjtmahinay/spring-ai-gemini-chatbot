@@ -1,0 +1,55 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '3.2.6'
+	id 'io.spring.dependency-management' version '1.1.5'
+	id 'dev.hilla' version '2.5.5'
+	id 'io.freefair.lombok' version "8.6"
+}
+
+group = 'com.rjtmahinay.ai'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '17'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+	maven { url 'https://repo.spring.io/snapshot' }
+}
+
+ext {
+	set('hillaVersion', "2.5.7")
+
+	// GA - Official Released Version
+	// set('springAiVersion', "0.8.1")
+	// Milestone Version - Alpha or Beta version
+	set('springAiVersion', "1.0.0-SNAPSHOT")
+}
+
+dependencies {
+	implementation 'dev.hilla:hilla-react-spring-boot-starter'
+	implementation 'org.springframework.ai:spring-ai-vertex-ai-gemini-spring-boot-starter'
+	implementation 'org.springframework.ai:spring-ai-vertex-ai-embedding-spring-boot-starter'
+	annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "dev.hilla:hilla-bom:${hillaVersion}"
+		mavenBom "org.springframework.ai:spring-ai-bom:${springAiVersion}"
+	}
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}

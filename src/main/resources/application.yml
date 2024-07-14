@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: spring-ai-gemini-chatbot
+  ai:
+    vertex:
+      ai:
+        gemini:
+          #TODO: replace me with your Google Cloud Project ID
+          project-id: "rjtmahinay-ai-projects"
+          chat:
+            options:
+              model: "gemini-1.5-flash-001"
+          location: "us-central1"
+          transport: rest
+        embedding:
+          project-id: ${spring.ai.vertex.ai.gemini.project-id}
+          location:  ${spring.ai.vertex.ai.gemini.location}
