@@ -5,8 +5,7 @@ spring:
     vertex:
       ai:
         gemini:
-          #TODO: replace me with your Google Cloud Project ID
-          project-id: "rjtmahinay-ai-projects"
+          project-id: #TODO: replace me with your Google Cloud Project ID
           chat:
             options:
               model: "gemini-1.5-flash-001"
