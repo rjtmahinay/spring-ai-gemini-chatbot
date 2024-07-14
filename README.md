@@ -18,7 +18,7 @@ Java in AI: Implementation of Google Vertex AI using Spring AI and Hilla
     <li>Return the verification result</li>
     <li>Call the Chat endpoint</li>
     <li>Call the Chat API of Google Cloud via HTTP</li>
-    <li>Goggle Cloud Java Chat API uses Gemini Model</li>
+    <li>Google Cloud Java Chat API uses Gemini Model</li>
     <li>Gemini Model responds back based on the user message</li>
     <li>Google Cloud Java SDK return the model response via HTTP</li>
     <li>Spring AI return the model response with modification (if any, based on business logic)</li>
