@@ -4,7 +4,7 @@ This is a chatbot presented during my talk in Google I/O Extended Manila 2024.
 ## Session Title
 Java in AI: Implementation of Google Vertex AI using Spring AI and Hilla
 
-## System Landscape Diagram
+## Dynamic Diagram
 
 ![Gemini Chatbot System Landscape Diagram](misc/gemini-chatbot.png)
 
@@ -29,7 +29,7 @@ Java in AI: Implementation of Google Vertex AI using Spring AI and Hilla
 
 * Install Google Cloud CLI to authenticate locally: [Google Cloud CLI Authentication](https://cloud.google.com/docs/authentication/gcloud#local)
 * Replace Google Project ID in [application.yml](src/main/resources/application.yml)
-* Run <em>gradlew bootRun<em>
+* Run <em>gradlew bootRun</em>
 
 # License
 License
